@@ -3,16 +3,22 @@ using UnityEngine;
 
 public class Observer : MonoBehaviour
 {
-    public event Action EnterHouse;
-    public event Action ExitHouse;
+    public event Action ThiefEntered;
+    public event Action ThiefExited;
 
     private void OnTriggerEnter(Collider other)
     {
-        EnterHouse?.Invoke();
+        if (other.TryGetComponent<Mover>(out Mover mover))
+        {
+            ThiefEntered?.Invoke();
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        ExitHouse?.Invoke();
+        if (other.TryGetComponent<Mover>(out Mover mover))
+        {
+            ThiefExited?.Invoke();
+        }
     }
 }
