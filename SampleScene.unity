@@ -526,6 +526,8 @@ GameObject:
   - component: {fileID: 725012717}
   - component: {fileID: 725012716}
   - component: {fileID: 725012719}
+  - component: {fileID: 725012720}
+  - component: {fileID: 725012721}
   m_Layer: 0
   m_Name: AlarmPoint
   m_TagString: Untagged
@@ -674,6 +676,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &725012720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725012715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1899e25d5ec62d24c976c69df27b8b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &725012721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725012715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2147a8619a2954aa3eb11eb068710f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 725012719}
+  _audioClip: {fileID: 8300000, guid: ae798050f8358d4459ed3006a3a4aa34, type: 3}
+  _observer: {fileID: 725012720}
+  _volumeSpeed: 0.5
 --- !u!1001 &749605582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -829,7 +859,6 @@ GameObject:
   - component: {fileID: 1813468787}
   - component: {fileID: 1813468791}
   - component: {fileID: 1813468792}
-  - component: {fileID: 1813468793}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -970,22 +999,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1813468793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813468786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e2147a8619a2954aa3eb11eb068710f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioSource: {fileID: 725012719}
-  _audioClip: {fileID: 8300000, guid: ae798050f8358d4459ed3006a3a4aa34, type: 3}
-  _volumeSpeed: 0.5
-  _point: {fileID: 725012718}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
